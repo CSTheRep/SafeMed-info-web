@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #070d19;
+    color: #e2e8f0;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Academic & Tech Background Grids */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(14, 165, 233, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(20, 184, 166, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Glassmorphic Cards */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Subtle Quantum Glow Accents */
+.quantum-glow {
+  box-shadow: 0 0 50px -10px rgba(14, 165, 233, 0.18);
+}
+
+.teal-glow {
+  box-shadow: 0 0 40px -10px rgba(20, 184, 166, 0.2);
+}
+
+/* Custom Scrollbar for desktop */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
