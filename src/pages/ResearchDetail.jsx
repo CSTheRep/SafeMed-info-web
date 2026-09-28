@@ -404,13 +404,17 @@ export default function ResearchDetail() {
               <div className="p-5 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed whitespace-pre-line">
                 {paper.sections.results}
               </div>
-              {paper.id !== 1 ? (
+              {paper.id === 1 ? (
                 <div className="p-3 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF] text-[11px] font-mono text-[#857B78]">
-                  Strict placeholder rule: No synthetic metrics or fabricated benchmark scores are displayed.
+                  Empirical results extracted directly from the IEEE ICICV-2025 published paper (Figs. 1–7).
+                </div>
+              ) : paper.id === 2 ? (
+                <div className="p-3 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF] text-[11px] font-mono text-[#857B78]">
+                  Simulation benchmark results extracted directly from the IEEE published paper (Tables II &amp; III, Figs. 2 &amp; 3).
                 </div>
               ) : (
                 <div className="p-3 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF] text-[11px] font-mono text-[#857B78]">
-                  Empirical results extracted directly from the IEEE ICICV-2025 published paper (Figs. 1–7).
+                  Strict placeholder rule: No synthetic metrics or fabricated benchmark scores are displayed.
                 </div>
               )}
             </section>

@@ -88,19 +88,19 @@ export const journeyStages = [
     step: "05",
     id: "research-2",
     stageNumber: 5,
-    title: "Research 2: Quantum Models",
+    title: "Research 2: Quantum-Driven Predictive Analytics",
     phase: "Quantum Computational Exploration",
-    year: "[Year / Research 2]",
+    year: "2026",
     icon: "Atom",
     researchId: 2,
-    shortSummary: "Pioneering the application of quantum models and quantum machine learning circuits to tackle the exponential feature spaces of adverse drug events and molecular interactions.",
-    description: "[Quantum models research content to be added later. Exploring quantum feature maps, variational circuits, and state encoding.]",
-    keyInsight: "Demonstrated that quantum representations offer novel subspace embeddings for intricate, high-dimensional drug reaction attributes.",
-    progressionNote: "Investigating whether quantum computing could resolve high-dimensional correlation bottlenecks.",
+    shortSummary: "Published research introducing a hybrid quantum-classical framework (VQC and QSVM) for multimodal predictive analytics in early disease detection and rare ADE surveillance.",
+    description: "Published in IEEE: 'Quantum-Driven Predictive Analytics for Precision Medicine and Pharmacovigilance: A Multimodal Simulation Framework for Early Disease and Adverse Drug Event Detection' (ISBN: 979-8-3315-4970-1). Evaluates Variational Quantum Classifiers (VQC) and Quantum Support Vector Machines (QSVM) using an 8-qubit ZZFeatureMap on synthetic T2D data (10,000 records) and FAERS pharmacovigilance reports (15,000 records), achieving a 15% relative recall increase for rare ADEs over XGBoost.",
+    keyInsight: "Demonstrated that quantum Hilbert space feature maps capture higher-order non-linear feature interactions, yielding +7.3% AUC-ROC in disease forecasting and +15% relative recall for rare ADEs.",
+    progressionNote: "Pioneering the transition from classical baseline reporting to quantum machine learning models on high-dimensional biomedical data.",
     details: [
-      { label: "Direction", value: "Quantum Machine Learning & Variational Quantum Classifiers" },
-      { label: "Theoretical Scope", value: "Quantum Hilbert spaces for mapping complex multi-drug adverse associations" },
-      { label: "Hardware Context", value: "Simulated quantum computing with noise modeling for NISQ feasibility" }
+      { label: "Direction", value: "Quantum Machine Learning (VQC & QSVM)" },
+      { label: "Deliverable", value: "Published in IEEE (ISBN: 979-8-3315-4970-1)" },
+      { label: "Key Milestone", value: "73.9% recall on rare ADEs (FAERS) vs. 64.2% for XGBoost (+15% relative gain)" }
     ]
   },
   {
