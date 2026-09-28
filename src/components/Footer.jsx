@@ -162,7 +162,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/research/3" className="hover:text-[#C95C5C] transition-colors block">
-                  Paper 03: Deep Learning + Quantum
+                  Paper 03: Explainable Deep Learning
                 </Link>
               </li>
               <li className="pt-2">

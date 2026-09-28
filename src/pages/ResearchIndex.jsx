@@ -49,8 +49,8 @@ export default function ResearchIndex() {
               <p className="text-[#6B6260] font-sans">Investigates quantum feature mapping and Hilbert space representations for exponential interaction domains.</p>
             </div>
             <div className="p-3 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF]">
-              <span className="font-mono text-[#C95C5C] font-bold block mb-1">03. Deep Learning + Quantum</span>
-              <p className="text-[#6B6260] font-sans">Unifies deep neural networks with parameterized quantum circuits into an end-to-end hybrid intelligence framework.</p>
+              <span className="font-mono text-[#C95C5C] font-bold block mb-1">03. Explainable Deep Learning</span>
+              <p className="text-[#6B6260] font-sans">Harnesses convolutional neural networks, transfer learning, ensemble modeling, and Grad-CAM explainability for multi-disease diagnosis and clinical decision support.</p>
             </div>
           </div>
         </div>

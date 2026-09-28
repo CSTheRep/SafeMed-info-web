@@ -7,6 +7,7 @@ export default function ResearchCard({ paper }) {
     "Research 1": FileText,
     "Quantum Models": Atom,
     "Deep Learning + Quantum": Sparkles,
+    "Explainable Deep Learning": Sparkles,
   };
 
   const IconComponent = directionIcons[paper.direction] || FileText;
@@ -72,7 +73,7 @@ export default function ResearchCard({ paper }) {
         {/* Abstract Box */}
         <div className="mb-6 p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF]">
           <span className="text-[10px] font-mono uppercase text-[#857B78] font-bold block mb-1.5">
-            {paper.id === 1 || paper.id === 2 ? "Abstract" : "Abstract Placeholder"}
+            Abstract
           </span>
           <p className="text-xs text-[#6B6260] font-sans leading-relaxed">
             {paper.abstract}

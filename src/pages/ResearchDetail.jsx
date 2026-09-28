@@ -80,6 +80,7 @@ export default function ResearchDetail() {
     "Research 1": FileText,
     "Quantum Models": Atom,
     "Deep Learning + Quantum": Sparkles,
+    "Explainable Deep Learning": Sparkles,
   };
 
   const IconComponent = directionIcons[paper.direction] || FileText;
@@ -411,6 +412,10 @@ export default function ResearchDetail() {
               ) : paper.id === 2 ? (
                 <div className="p-3 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF] text-[11px] font-mono text-[#857B78]">
                   Simulation benchmark results extracted directly from the IEEE published paper (Tables II &amp; III, Figs. 2 &amp; 3).
+                </div>
+              ) : paper.id === 3 ? (
+                <div className="p-3 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF] text-[11px] font-mono text-[#857B78]">
+                  Experimental evaluation results extracted directly from Research Paper 3 (Table II, Figs. 1–3).
                 </div>
               ) : (
                 <div className="p-3 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF] text-[11px] font-mono text-[#857B78]">

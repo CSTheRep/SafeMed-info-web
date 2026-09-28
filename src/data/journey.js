@@ -107,19 +107,19 @@ export const journeyStages = [
     step: "06",
     id: "research-3",
     stageNumber: 6,
-    title: "Research 3: Deep Learning + Quantum",
-    phase: "Hybrid Intelligence",
-    year: "[Year / Research 3]",
+    title: "Research 3: Explainable Deep Learning Medical Diagnosis Assistant",
+    phase: "Explainable Clinical Decision Support",
+    year: "[Year]",
     icon: "Sparkles",
     researchId: 3,
-    shortSummary: "Unifying classical deep neural networks with parameterized quantum circuits into an end-to-end hybrid framework for superior feature extraction and predictive sensitivity.",
-    description: "[Deep learning + quantum hybrid research content to be added later. Combining neural feature extraction with quantum variational layers.]",
-    keyInsight: "Achieved synergistic coupling: classical layers distill multi-modal patient/clinical narratives while quantum layers capture complex non-linear entanglements.",
-    progressionNote: "Synthesizing deep learning power with quantum mechanics to form a unified computational vanguard.",
+    shortSummary: "Explainable deep learning framework combining transfer learning CNNs, multimodal clinical metadata fusion, ensemble modeling, and Grad-CAM visual explainability for multi-disease diagnosis.",
+    description: "Research Paper 3: 'Explainable Deep Learning-Based Medical Diagnosis Assistant for Multi-Disease Detection and Clinical Decision Support'. Evaluates transfer learning CNNs (ResNet, EfficientNet, DenseNet) and ensemble modeling across 28,450 medical images spanning five diseases (cancer, tuberculosis, diabetic retinopathy, pneumonia, and neurological disorders), achieving 96.8% accuracy, 0.82-second inference, and 92% Grad-CAM clinical validation.",
+    keyInsight: "Transfer learning CNNs combined with clinical metadata fusion and Grad-CAM explainability achieve 96.8% accuracy, reduce false positive rates to 3.4% and false negative rates to 3.1%, and support 50 parallel cases in telemedicine.",
+    progressionNote: "Extending intelligent clinical decision support with visual explainability and fast inference to alleviate specialist shortages in resource-limited settings.",
     details: [
-      { label: "Architecture", value: "Hybrid Quantum-Classical Neural Network (HQNN)" },
-      { label: "Integration", value: "Seamless backpropagation bridging PyTorch/TensorFlow with Qiskit/PennyLane" },
-      { label: "SafeMed Vision", value: "Serving as the intelligent computational backbone for future pharmacovigilance engines" }
+      { label: "Architecture", value: "Transfer Learning CNNs (ResNet, EfficientNet, DenseNet) + Ensemble Boosting" },
+      { label: "Clinical Explainability", value: "Grad-CAM visual heatmaps (92% clinical concordance) & ranked differential diagnosis" },
+      { label: "Performance", value: "96.8% accuracy, 0.82s inference time, 73 predictions/min throughput" }
     ]
   }
 ];
@@ -154,8 +154,8 @@ export const journeyConnectionNarrative = {
     },
     {
       step: "06",
-      title: "Deep Learning + Quantum",
-      detail: "Research 3 synthesized deep neural representations with quantum variational layers."
+      title: "Explainable Deep Learning",
+      detail: "Research 3 establishes an explainable deep learning diagnosis assistant with Grad-CAM and clinical decision support."
     },
     {
       step: "07",
