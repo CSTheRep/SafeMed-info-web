@@ -14,7 +14,7 @@ export default function FutureVision() {
   };
 
   return (
-    <section id="future-vision" className="py-20 md:py-28 bg-navy-950/60 relative border-t border-slate-900">
+    <section id="future-vision" className="py-20 md:py-28 bg-[#F5EFE6] relative border-t border-[#E6D9CF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -31,25 +31,25 @@ export default function FutureVision() {
             return (
               <div
                 key={item.title}
-                className="rounded-2xl bg-slate-900/70 border border-slate-800 p-6 flex flex-col justify-between hover:border-tealAccent-500/40 hover:-translate-y-1 transition-all duration-300 shadow-md group"
+                className="rounded-2xl bg-[#FFFDFC] border border-[#E6D9CF] p-6 flex flex-col justify-between hover:border-[#C95C5C]/50 hover:-translate-y-1 transition-all duration-300 shadow-sm group"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700/80 flex items-center justify-center text-tealAccent-400 mb-4 group-hover:scale-105 transition-transform">
+                  <div className="w-10 h-10 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] flex items-center justify-center text-[#A94444] mb-4 group-hover:scale-105 transition-transform">
                     <Icon className="w-5 h-5" />
                   </div>
 
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-tealAccent-300 transition-colors">
+                  <h3 className="text-lg font-bold text-[#302B2B] mb-2 group-hover:text-[#A94444] transition-colors">
                     {item.title}
                   </h3>
 
-                  <div className="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-xs font-sans text-slate-300 leading-relaxed">
+                  <div className="p-3.5 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-sans text-[#6B6260] leading-relaxed">
                     {item.description}
                   </div>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                <div className="mt-4 pt-3 border-t border-[#E6D9CF] flex items-center justify-between text-[11px] font-mono text-[#857B78]">
                   <span>Prospective Vector</span>
-                  <span className="text-tealAccent-400 flex items-center gap-0.5">
+                  <span className="text-[#C95C5C] flex items-center gap-0.5 font-medium">
                     Future Roadmap <ArrowUpRight className="w-3 h-3" />
                   </span>
                 </div>
@@ -59,9 +59,9 @@ export default function FutureVision() {
         </div>
 
         {/* Future Disclaimer Banner */}
-        <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="p-4 rounded-xl bg-[#FFFDFC] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm">
           <span>Disclaimer: Prospective vectors reflect exploratory academic trajectories, not deployed clinical claims.</span>
-          <span className="text-tealAccent-400 font-semibold">[Future Roadmap]</span>
+          <span className="text-[#A94444] font-semibold">[Future Roadmap]</span>
         </div>
 
       </div>

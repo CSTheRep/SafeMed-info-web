@@ -81,22 +81,22 @@ export default function ResearchDetail() {
   const IconComponent = directionIcons[paper.direction] || FileText;
 
   return (
-    <div className="pt-24 pb-24 min-h-screen bg-navy-950 text-slate-100">
+    <div className="pt-24 pb-24 min-h-screen bg-[#FAF7F2] text-[#302B2B]">
       
       {/* Top Banner / Breadcrumb */}
-      <div className="border-b border-slate-800 bg-slate-900/60 backdrop-blur-md sticky top-16 z-30">
+      <div className="border-b border-[#E6D9CF] bg-[#FFFDFC]/90 backdrop-blur-md sticky top-16 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
-            <Link to="/" className="hover:text-white transition-colors flex items-center gap-1">
+          <div className="flex items-center gap-2 text-xs font-mono text-[#6B6260]">
+            <Link to="/" className="hover:text-[#C95C5C] transition-colors flex items-center gap-1">
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Home</span>
             </Link>
             <span>/</span>
-            <Link to="/research" className="hover:text-white transition-colors">
+            <Link to="/research" className="hover:text-[#C95C5C] transition-colors">
               Research
             </Link>
             <span>/</span>
-            <span className="text-tealAccent-400 font-semibold truncate max-w-[200px] sm:max-w-none">
+            <span className="text-[#C95C5C] font-semibold truncate max-w-[200px] sm:max-w-none">
               Paper 0{paper.id}: {paper.direction}
             </span>
           </div>
@@ -105,9 +105,9 @@ export default function ResearchDetail() {
             <button
               type="button"
               onClick={handleShare}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-[#FAF7F2] hover:bg-[#F5EFE6] text-[#302B2B] border border-[#E6D9CF] transition-colors"
             >
-              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Share2 className="w-3.5 h-3.5" />}
+              {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Share2 className="w-3.5 h-3.5 text-[#6B6260]" />}
               <span>{copied ? "Link Copied" : "Share"}</span>
             </button>
 
@@ -115,7 +115,7 @@ export default function ResearchDetail() {
             <button
               type="button"
               onClick={() => setMobileNavOpen(!mobileNavOpen)}
-              className="lg:hidden p-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white"
+              className="lg:hidden p-1.5 rounded-lg bg-[#FAF7F2] text-[#302B2B] hover:bg-[#F5EFE6] border border-[#E6D9CF]"
               aria-label="Table of contents"
             >
               {mobileNavOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
@@ -128,17 +128,17 @@ export default function ResearchDetail() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
         
         {/* Paper Header */}
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 sm:p-10 mb-12 shadow-2xl relative overflow-hidden">
+        <div className="rounded-2xl border border-[#E6D9CF] bg-[#FFFDFC] p-6 sm:p-10 mb-12 shadow-sm relative overflow-hidden">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
             <div className="flex items-center gap-3">
-              <span className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-tealAccent-400 font-mono font-bold text-sm">
+              <span className="w-10 h-10 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] flex items-center justify-center text-[#A94444] font-mono font-bold text-sm">
                 0{paper.id}
               </span>
               <div className="flex items-center gap-2">
-                <span className="text-xs font-mono uppercase tracking-wider font-semibold px-2.5 py-1 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-300">
+                <span className="text-xs font-mono uppercase tracking-wider font-semibold px-2.5 py-1 rounded-full bg-[#F7E3E3] border border-[#E8A3A3] text-[#A94444]">
                   {paper.direction}
                 </span>
-                <span className="text-xs font-mono text-slate-400">
+                <span className="text-xs font-mono text-[#857B78]">
                   {paper.tag}
                 </span>
               </div>
@@ -149,51 +149,51 @@ export default function ResearchDetail() {
                 href={paper.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-brand-600 hover:bg-brand-500 text-white transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-[#C95C5C] hover:bg-[#A94444] text-[#FFFDFC] transition-colors shadow-sm"
               >
                 <span>Read Original Publication</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             ) : (
-              <span className="text-xs font-mono text-slate-500 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800">
+              <span className="text-xs font-mono text-[#857B78] px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF]">
                 [19. Paper Link: To be added upon publication]
               </span>
             )}
           </div>
 
           {/* 1. Paper Title */}
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight mb-6">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-[#302B2B] tracking-tight leading-tight mb-6">
             {paper.title}
           </h1>
 
           {/* 2. Research Area, 3. Authors, 4. Status Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs font-mono pt-4 border-t border-slate-800/80">
-            <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
-              <span className="text-[10px] text-slate-500 block uppercase mb-1 flex items-center gap-1">
-                <Tag className="w-3 h-3 text-brand-400" /> Research Area
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs font-mono pt-4 border-t border-[#E6D9CF]">
+            <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF]">
+              <span className="text-[10px] text-[#857B78] block uppercase mb-1 flex items-center gap-1">
+                <Tag className="w-3 h-3 text-[#C95C5C]" /> Research Area
               </span>
-              <span className="text-slate-200 font-sans font-semibold">{paper.area}</span>
+              <span className="text-[#302B2B] font-sans font-semibold">{paper.area}</span>
             </div>
 
-            <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
-              <span className="text-[10px] text-slate-500 block uppercase mb-1 flex items-center gap-1">
-                <Calendar className="w-3 h-3 text-tealAccent-400" /> Year
+            <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF]">
+              <span className="text-[10px] text-[#857B78] block uppercase mb-1 flex items-center gap-1">
+                <Calendar className="w-3 h-3 text-[#A94444]" /> Year
               </span>
-              <span className="text-slate-200 font-semibold">{paper.year}</span>
+              <span className="text-[#302B2B] font-semibold">{paper.year}</span>
             </div>
 
-            <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
-              <span className="text-[10px] text-slate-500 block uppercase mb-1 flex items-center gap-1">
-                <Bookmark className="w-3 h-3 text-amber-400" /> Status / Venue
+            <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF]">
+              <span className="text-[10px] text-[#857B78] block uppercase mb-1 flex items-center gap-1">
+                <Bookmark className="w-3 h-3 text-[#C95C5C]" /> Status / Venue
               </span>
-              <span className="text-slate-200 font-semibold">{paper.status}</span>
+              <span className="text-[#302B2B] font-semibold">{paper.status}</span>
             </div>
 
-            <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
-              <span className="text-[10px] text-slate-500 block uppercase mb-1 flex items-center gap-1">
-                <User className="w-3 h-3 text-purple-400" /> Authors
+            <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF]">
+              <span className="text-[10px] text-[#857B78] block uppercase mb-1 flex items-center gap-1">
+                <User className="w-3 h-3 text-[#A94444]" /> Authors
               </span>
-              <span className="text-slate-200 font-sans truncate block">
+              <span className="text-[#302B2B] font-sans truncate block">
                 {Array.isArray(paper.authors) ? paper.authors.join(", ") : paper.authors}
               </span>
             </div>
@@ -205,9 +205,9 @@ export default function ResearchDetail() {
           
           {/* Sticky Desktop Table of Contents */}
           <aside className="hidden lg:block lg:col-span-3 sticky top-32 space-y-4">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-5 shadow-lg">
-              <div className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold pb-3 mb-3 border-b border-slate-800 flex items-center gap-2">
-                <BookOpen className="w-3.5 h-3.5 text-tealAccent-400" />
+            <div className="rounded-2xl border border-[#E6D9CF] bg-[#FFFDFC] p-5 shadow-sm">
+              <div className="text-xs font-mono uppercase tracking-wider text-[#302B2B] font-bold pb-3 mb-3 border-b border-[#E6D9CF] flex items-center gap-2">
+                <BookOpen className="w-3.5 h-3.5 text-[#A94444]" />
                 <span>Paper Sections</span>
               </div>
               <nav className="space-y-1 text-xs">
@@ -218,8 +218,8 @@ export default function ResearchDetail() {
                     onClick={() => scrollToSection(sec.id)}
                     className={`w-full text-left px-3 py-2 rounded-lg transition-colors flex items-center justify-between ${
                       activeSection === sec.id
-                        ? 'bg-brand-600 text-white font-semibold'
-                        : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+                        ? 'bg-[#C95C5C] text-[#FFFDFC] font-semibold shadow-sm'
+                        : 'text-[#6B6260] hover:text-[#302B2B] hover:bg-[#FAF7F2]'
                     }`}
                   >
                     <span>{sec.label}</span>
@@ -229,16 +229,16 @@ export default function ResearchDetail() {
             </div>
 
             {/* Quick Switch to Other Papers */}
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-4 text-xs font-mono space-y-2">
-              <span className="text-[10px] uppercase text-slate-500 font-bold block">All Research Tracks</span>
+            <div className="rounded-2xl border border-[#E6D9CF] bg-[#FFFDFC] p-4 text-xs font-mono space-y-2 shadow-sm">
+              <span className="text-[10px] uppercase text-[#857B78] font-bold block">All Research Tracks</span>
               {researchPapers.map((p) => (
                 <Link
                   key={p.id}
                   to={`/research/${p.id}`}
                   className={`block px-3 py-2 rounded-lg truncate transition-colors ${
                     p.id === paper.id
-                      ? 'bg-slate-800 text-brand-300 font-bold border border-brand-500/30'
-                      : 'text-slate-400 hover:text-white hover:bg-slate-800/40'
+                      ? 'bg-[#F7E3E3] text-[#A94444] font-bold border border-[#E8A3A3]'
+                      : 'text-[#6B6260] hover:text-[#302B2B] hover:bg-[#FAF7F2]'
                   }`}
                 >
                   Paper 0{p.id}: {p.direction}
@@ -249,15 +249,15 @@ export default function ResearchDetail() {
 
           {/* Mobile Table of Contents Accordion */}
           {mobileNavOpen && (
-            <div className="lg:hidden col-span-12 rounded-xl bg-slate-900 border border-slate-800 p-4 mb-6 space-y-1">
-              <div className="text-xs font-mono uppercase text-slate-400 font-bold mb-2">Jump to Section</div>
+            <div className="lg:hidden col-span-12 rounded-xl bg-[#FFFDFC] border border-[#E6D9CF] p-4 mb-6 space-y-1 shadow-sm">
+              <div className="text-xs font-mono uppercase text-[#302B2B] font-bold mb-2">Jump to Section</div>
               <div className="grid grid-cols-2 gap-2 text-xs">
                 {navSections.map((sec) => (
                   <button
                     key={sec.id}
                     type="button"
                     onClick={() => scrollToSection(sec.id)}
-                    className="p-2 rounded bg-slate-950 text-left text-slate-300 hover:text-white truncate"
+                    className="p-2 rounded bg-[#FAF7F2] border border-[#E6D9CF] text-left text-[#6B6260] hover:text-[#302B2B] truncate"
                   >
                     {sec.label}
                   </button>
@@ -270,55 +270,55 @@ export default function ResearchDetail() {
           <main className="lg:col-span-9 space-y-10">
             
             {/* 5. Abstract & 6. Background */}
-            <section id="overview" className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 md:p-8 space-y-6">
+            <section id="overview" className="rounded-2xl border border-[#E6D9CF] bg-[#FFFDFC] p-6 md:p-8 space-y-6 shadow-sm">
               <div>
-                <span className="text-xs font-mono font-bold text-brand-400 uppercase tracking-wider block mb-1">
+                <span className="text-xs font-mono font-bold text-[#C95C5C] uppercase tracking-wider block mb-1">
                   Section 05
                 </span>
-                <h2 className="text-2xl font-bold text-white mb-3">Abstract</h2>
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-sm text-slate-300 leading-relaxed font-sans">
+                <h2 className="text-2xl font-bold text-[#302B2B] mb-3">Abstract</h2>
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-sm text-[#6B6260] leading-relaxed font-sans">
                   {paper.abstract}
                 </div>
               </div>
 
-              <div id="background" className="pt-6 border-t border-slate-800">
-                <span className="text-xs font-mono font-bold text-tealAccent-400 uppercase tracking-wider block mb-1">
+              <div id="background" className="pt-6 border-t border-[#E6D9CF]">
+                <span className="text-xs font-mono font-bold text-[#A94444] uppercase tracking-wider block mb-1">
                   Section 06
                 </span>
-                <h2 className="text-xl font-bold text-white mb-3">Background</h2>
-                <div className="p-4 rounded-xl bg-slate-950/70 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed">
+                <h2 className="text-xl font-bold text-[#302B2B] mb-3">Background</h2>
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
                   {paper.sections.background}
                 </div>
               </div>
             </section>
 
             {/* 7. Problem Statement, 8. Motivation, 9. Objectives */}
-            <section id="problem" className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 md:p-8 space-y-6">
+            <section id="problem" className="rounded-2xl border border-[#E6D9CF] bg-[#FFFDFC] p-6 md:p-8 space-y-6 shadow-sm">
               <div>
-                <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider block mb-1">
+                <span className="text-xs font-mono font-bold text-[#C95C5C] uppercase tracking-wider block mb-1">
                   Section 07
                 </span>
-                <h2 className="text-2xl font-bold text-white mb-3">Problem Statement</h2>
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed">
+                <h2 className="text-2xl font-bold text-[#302B2B] mb-3">Problem Statement</h2>
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
                   {paper.sections.problemStatement}
                 </div>
               </div>
 
-              <div id="motivation" className="pt-6 border-t border-slate-800 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div id="motivation" className="pt-6 border-t border-[#E6D9CF] grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">
+                  <span className="text-xs font-mono font-bold text-[#857B78] uppercase tracking-wider block mb-1">
                     Section 08 • Motivation
                   </span>
-                  <div className="p-4 rounded-xl bg-slate-950/70 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed h-full">
+                  <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed h-full">
                     {paper.sections.motivation}
                   </div>
                 </div>
 
                 <div>
-                  <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider block mb-1">
+                  <span className="text-xs font-mono font-bold text-[#857B78] uppercase tracking-wider block mb-1">
                     Section 09 • Objectives
                   </span>
-                  <div className="p-4 rounded-xl bg-slate-950/70 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed h-full">
+                  <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed h-full">
                     {paper.sections.objectives}
                   </div>
                 </div>
@@ -326,122 +326,122 @@ export default function ResearchDetail() {
             </section>
 
             {/* 10. Methodology & 12. Architecture / Model */}
-            <section id="methodology" className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 md:p-8 space-y-6">
+            <section id="methodology" className="rounded-2xl border border-[#E6D9CF] bg-[#FFFDFC] p-6 md:p-8 space-y-6 shadow-sm">
               <div>
-                <span className="text-xs font-mono font-bold text-purple-400 uppercase tracking-wider block mb-1">
+                <span className="text-xs font-mono font-bold text-[#A94444] uppercase tracking-wider block mb-1">
                   Section 10
                 </span>
-                <h2 className="text-2xl font-bold text-white mb-3">Methodology</h2>
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed">
+                <h2 className="text-2xl font-bold text-[#302B2B] mb-3">Methodology</h2>
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
                   {paper.sections.methodology}
                 </div>
               </div>
 
-              <div id="architecture" className="pt-6 border-t border-slate-800">
-                <span className="text-xs font-mono font-bold text-indigo-400 uppercase tracking-wider block mb-1">
+              <div id="architecture" className="pt-6 border-t border-[#E6D9CF]">
+                <span className="text-xs font-mono font-bold text-[#C95C5C] uppercase tracking-wider block mb-1">
                   Section 12
                 </span>
-                <h2 className="text-xl font-bold text-white mb-3">Architecture / Model</h2>
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed">
+                <h2 className="text-xl font-bold text-[#302B2B] mb-3">Architecture / Model</h2>
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
                   {paper.sections.architecture}
                 </div>
               </div>
             </section>
 
             {/* 11. Dataset / Data Source & 13. Experimental Setup */}
-            <section id="dataset" className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 md:p-8 space-y-6">
+            <section id="dataset" className="rounded-2xl border border-[#E6D9CF] bg-[#FFFDFC] p-6 md:p-8 space-y-6 shadow-sm">
               <div>
-                <span className="text-xs font-mono font-bold text-tealAccent-400 uppercase tracking-wider block mb-1">
+                <span className="text-xs font-mono font-bold text-[#A94444] uppercase tracking-wider block mb-1">
                   Section 11
                 </span>
-                <h2 className="text-2xl font-bold text-white mb-3">Dataset / Data Source</h2>
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed">
+                <h2 className="text-2xl font-bold text-[#302B2B] mb-3">Dataset / Data Source</h2>
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
                   {paper.sections.dataset}
                 </div>
               </div>
 
-              <div id="experiments" className="pt-6 border-t border-slate-800">
-                <span className="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider block mb-1">
+              <div id="experiments" className="pt-6 border-t border-[#E6D9CF]">
+                <span className="text-xs font-mono font-bold text-[#C95C5C] uppercase tracking-wider block mb-1">
                   Section 13
                 </span>
-                <h2 className="text-xl font-bold text-white mb-3">Experimental Setup</h2>
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed">
+                <h2 className="text-xl font-bold text-[#302B2B] mb-3">Experimental Setup</h2>
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
                   {paper.sections.experimentalSetup}
                 </div>
               </div>
             </section>
 
             {/* 14. Results */}
-            <section id="results" className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 md:p-8 space-y-4">
-              <span className="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider block mb-1">
+            <section id="results" className="rounded-2xl border border-[#E6D9CF] bg-[#FFFDFC] p-6 md:p-8 space-y-4 shadow-sm">
+              <span className="text-xs font-mono font-bold text-[#A94444] uppercase tracking-wider block mb-1">
                 Section 14
               </span>
-              <h2 className="text-2xl font-bold text-white mb-3">Results &amp; Empirical Evaluation</h2>
-              <div className="p-5 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed">
+              <h2 className="text-2xl font-bold text-[#302B2B] mb-3">Results &amp; Empirical Evaluation</h2>
+              <div className="p-5 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
                 {paper.sections.results}
               </div>
-              <div className="p-3 rounded-lg bg-slate-900/60 border border-slate-800 text-[11px] font-mono text-slate-500">
+              <div className="p-3 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF] text-[11px] font-mono text-[#857B78]">
                 Strict placeholder rule: No synthetic metrics or fabricated benchmark scores are displayed.
               </div>
             </section>
 
             {/* 15. Discussion & 16. Limitations */}
-            <section id="discussion" className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 md:p-8 space-y-6">
+            <section id="discussion" className="rounded-2xl border border-[#E6D9CF] bg-[#FFFDFC] p-6 md:p-8 space-y-6 shadow-sm">
               <div>
-                <span className="text-xs font-mono font-bold text-rose-400 uppercase tracking-wider block mb-1">
+                <span className="text-xs font-mono font-bold text-[#C95C5C] uppercase tracking-wider block mb-1">
                   Section 15
                 </span>
-                <h2 className="text-2xl font-bold text-white mb-3">Discussion</h2>
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed">
+                <h2 className="text-2xl font-bold text-[#302B2B] mb-3">Discussion</h2>
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
                   {paper.sections.discussion}
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-slate-800">
-                <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider block mb-1">
+              <div className="pt-6 border-t border-[#E6D9CF]">
+                <span className="text-xs font-mono font-bold text-[#A94444] uppercase tracking-wider block mb-1">
                   Section 16
                 </span>
-                <h2 className="text-xl font-bold text-white mb-3">Limitations</h2>
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed">
+                <h2 className="text-xl font-bold text-[#302B2B] mb-3">Limitations</h2>
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
                   {paper.sections.limitations}
                 </div>
               </div>
             </section>
 
             {/* 17. Future Work & 18. Conclusion */}
-            <section id="future" className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 md:p-8 space-y-6">
+            <section id="future" className="rounded-2xl border border-[#E6D9CF] bg-[#FFFDFC] p-6 md:p-8 space-y-6 shadow-sm">
               <div>
-                <span className="text-xs font-mono font-bold text-brand-400 uppercase tracking-wider block mb-1">
+                <span className="text-xs font-mono font-bold text-[#C95C5C] uppercase tracking-wider block mb-1">
                   Section 17
                 </span>
-                <h2 className="text-2xl font-bold text-white mb-3">Future Work</h2>
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed">
+                <h2 className="text-2xl font-bold text-[#302B2B] mb-3">Future Work</h2>
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
                   {paper.sections.futureWork}
                 </div>
               </div>
 
-              <div id="conclusion" className="pt-6 border-t border-slate-800">
-                <span className="text-xs font-mono font-bold text-tealAccent-400 uppercase tracking-wider block mb-1">
+              <div id="conclusion" className="pt-6 border-t border-[#E6D9CF]">
+                <span className="text-xs font-mono font-bold text-[#A94444] uppercase tracking-wider block mb-1">
                   Section 18
                 </span>
-                <h2 className="text-xl font-bold text-white mb-3">Conclusion</h2>
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-300 leading-relaxed">
+                <h2 className="text-xl font-bold text-[#302B2B] mb-3">Conclusion</h2>
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
                   {paper.sections.conclusion}
                 </div>
               </div>
             </section>
 
             {/* Bottom Paper Navigation (Previous / Next Paper) */}
-            <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="pt-8 border-t border-[#E6D9CF] flex flex-col sm:flex-row items-center justify-between gap-4">
               {prevPaper ? (
                 <Link
                   to={`/research/${prevPaper.id}`}
-                  className="w-full sm:w-auto p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 flex items-center gap-3 transition-colors group"
+                  className="w-full sm:w-auto p-4 rounded-xl bg-[#FFFDFC] border border-[#E6D9CF] hover:border-[#C95C5C]/50 flex items-center gap-3 transition-colors shadow-sm group"
                 >
-                  <ChevronLeft className="w-5 h-5 text-slate-400 group-hover:text-white" />
+                  <ChevronLeft className="w-5 h-5 text-[#857B78] group-hover:text-[#C95C5C]" />
                   <div>
-                    <span className="text-[10px] font-mono text-slate-500 uppercase block">Previous Paper</span>
-                    <span className="text-xs font-bold text-white group-hover:text-brand-300">
+                    <span className="text-[10px] font-mono text-[#857B78] uppercase block">Previous Paper</span>
+                    <span className="text-xs font-bold text-[#302B2B] group-hover:text-[#A94444]">
                       Paper 0{prevPaper.id}: {prevPaper.direction}
                     </span>
                   </div>
@@ -451,15 +451,15 @@ export default function ResearchDetail() {
               {nextPaper ? (
                 <Link
                   to={`/research/${nextPaper.id}`}
-                  className="w-full sm:w-auto p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 flex items-center justify-end gap-3 transition-colors text-right group"
+                  className="w-full sm:w-auto p-4 rounded-xl bg-[#FFFDFC] border border-[#E6D9CF] hover:border-[#C95C5C]/50 flex items-center justify-end gap-3 transition-colors text-right shadow-sm group"
                 >
                   <div>
-                    <span className="text-[10px] font-mono text-slate-500 uppercase block">Next Paper</span>
-                    <span className="text-xs font-bold text-white group-hover:text-brand-300">
+                    <span className="text-[10px] font-mono text-[#857B78] uppercase block">Next Paper</span>
+                    <span className="text-xs font-bold text-[#302B2B] group-hover:text-[#A94444]">
                       Paper 0{nextPaper.id}: {nextPaper.direction}
                     </span>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-white" />
+                  <ChevronRight className="w-5 h-5 text-[#857B78] group-hover:text-[#C95C5C]" />
                 </Link>
               ) : <div />}
             </div>

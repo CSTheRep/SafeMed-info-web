@@ -25,26 +25,26 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-navy-950 border-t border-slate-800 text-slate-400 py-14">
+    <footer className="bg-[#F5EFE6] border-t border-[#E6D9CF] text-[#6B6260] py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Row */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-800/80">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-[#E6D9CF]">
           
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-tealAccent-500 flex items-center justify-center text-navy-950">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#C95C5C] to-[#A94444] flex items-center justify-center text-[#FFFDFC]">
                 <Shield className="w-4 h-4 stroke-[2.5]" />
               </div>
-              <span className="text-xl font-bold tracking-tight text-white">SafeMed</span>
+              <span className="text-xl font-bold tracking-tight text-[#302B2B]">SafeMed</span>
             </div>
             
-            <p className="text-sm font-medium text-slate-300">
+            <p className="text-sm font-medium text-[#302B2B]">
               Research • Technology • Drug Safety
             </p>
             
-            <p className="text-xs text-slate-400 max-w-sm leading-relaxed font-normal">
+            <p className="text-xs text-[#6B6260] max-w-sm leading-relaxed font-normal">
               A dedicated academic and technological journey examining digital adverse drug event reporting, optical prescription intake, and hybrid quantum computational models.
             </p>
 
@@ -54,7 +54,7 @@ export default function Footer() {
                 href={projectConfig.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
+                className="w-8 h-8 rounded-lg bg-[#FFFDFC] border border-[#E6D9CF] flex items-center justify-center text-[#6B6260] hover:text-[#C95C5C] hover:border-[#C95C5C]/50 transition-colors shadow-sm"
                 aria-label="GitHub Repository"
               >
                 <Github className="w-4 h-4" />
@@ -64,7 +64,7 @@ export default function Footer() {
                 href={projectConfig.links.authorProfile}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
+                className="w-8 h-8 rounded-lg bg-[#FFFDFC] border border-[#E6D9CF] flex items-center justify-center text-[#6B6260] hover:text-[#C95C5C] hover:border-[#C95C5C]/50 transition-colors shadow-sm"
                 aria-label="Academic / LinkedIn Profile"
               >
                 <Linkedin className="w-4 h-4" />
@@ -72,7 +72,7 @@ export default function Footer() {
 
               <Link
                 to="/research"
-                className="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
+                className="w-8 h-8 rounded-lg bg-[#FFFDFC] border border-[#E6D9CF] flex items-center justify-center text-[#6B6260] hover:text-[#C95C5C] hover:border-[#C95C5C]/50 transition-colors shadow-sm"
                 aria-label="Research Papers"
               >
                 <BookOpen className="w-4 h-4" />
@@ -82,7 +82,7 @@ export default function Footer() {
 
           {/* Quick Navigation Links */}
           <div className="md:col-span-4 space-y-3">
-            <div className="text-xs font-mono uppercase tracking-wider text-slate-300 font-bold">
+            <div className="text-xs font-mono uppercase tracking-wider text-[#302B2B] font-bold">
               Navigation
             </div>
             <ul className="space-y-2 text-xs">
@@ -90,7 +90,7 @@ export default function Footer() {
                 <a
                   href="#why-safemed"
                   onClick={(e) => handleNavClick(e, '#why-safemed')}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#C95C5C] transition-colors"
                 >
                   Why SafeMed
                 </a>
@@ -99,7 +99,7 @@ export default function Footer() {
                 <a
                   href="#journey"
                   onClick={(e) => handleNavClick(e, '#journey')}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#C95C5C] transition-colors"
                 >
                   Journey
                 </a>
@@ -108,7 +108,7 @@ export default function Footer() {
                 <a
                   href="#research-papers"
                   onClick={(e) => handleNavClick(e, '#research-papers')}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#C95C5C] transition-colors"
                 >
                   Research Papers
                 </a>
@@ -117,7 +117,7 @@ export default function Footer() {
                 <a
                   href="#how-it-works"
                   onClick={(e) => handleNavClick(e, '#how-it-works')}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#C95C5C] transition-colors"
                 >
                   How It Works
                 </a>
@@ -126,7 +126,7 @@ export default function Footer() {
                 <a
                   href="#technology"
                   onClick={(e) => handleNavClick(e, '#technology')}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#C95C5C] transition-colors"
                 >
                   Technology
                 </a>
@@ -135,7 +135,7 @@ export default function Footer() {
                 <a
                   href="#about"
                   onClick={(e) => handleNavClick(e, '#about')}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#C95C5C] transition-colors"
                 >
                   About
                 </a>
@@ -145,22 +145,22 @@ export default function Footer() {
 
           {/* Research Quick Links */}
           <div className="md:col-span-3 space-y-3">
-            <div className="text-xs font-mono uppercase tracking-wider text-slate-300 font-bold">
+            <div className="text-xs font-mono uppercase tracking-wider text-[#302B2B] font-bold">
               Research Tracks
             </div>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link to="/research/1" className="hover:text-brand-300 transition-colors block">
+                <Link to="/research/1" className="hover:text-[#C95C5C] transition-colors block">
                   Paper 01: Foundational Research
                 </Link>
               </li>
               <li>
-                <Link to="/research/2" className="hover:text-purple-300 transition-colors block">
+                <Link to="/research/2" className="hover:text-[#C95C5C] transition-colors block">
                   Paper 02: Quantum Models
                 </Link>
               </li>
               <li>
-                <Link to="/research/3" className="hover:text-tealAccent-300 transition-colors block">
+                <Link to="/research/3" className="hover:text-[#C95C5C] transition-colors block">
                   Paper 03: Deep Learning + Quantum
                 </Link>
               </li>
@@ -168,7 +168,7 @@ export default function Footer() {
                 <button
                   type="button"
                   onClick={scrollToTop}
-                  className="inline-flex items-center gap-1.5 text-[11px] font-mono text-slate-400 hover:text-white"
+                  className="inline-flex items-center gap-1.5 text-[11px] font-mono text-[#6B6260] hover:text-[#C95C5C]"
                 >
                   <ArrowUp className="w-3.5 h-3.5" /> Back to top
                 </button>
@@ -179,11 +179,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright Strip */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-slate-500 gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-[#857B78] gap-4">
           <div>
             &copy; SafeMed — Research &amp; Project Showcase
           </div>
-          <div className="text-slate-500 text-[11px]">
+          <div className="text-[#857B78] text-[11px]">
             Academic Information Portal • Non-Clinical Portfolio
           </div>
         </div>

@@ -54,7 +54,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'py-2.5 bg-navy-950/85 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-black/20'
+          ? 'py-2.5 bg-[#FFFDFC]/90 backdrop-blur-md border-b border-[#E6D9CF] shadow-sm shadow-[#302B2B]/5'
           : 'py-5 bg-transparent border-b border-transparent'
       }`}
     >
@@ -63,17 +63,17 @@ export default function Navbar() {
           {/* Logo / Brand */}
           <Link
             to="/"
-            className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-brand-500 rounded-lg p-1"
+            className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-[#C95C5C] rounded-lg p-1"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-tealAccent-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
-              <Shield className="w-5 h-5 text-navy-950 stroke-[2.5]" />
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#C95C5C] to-[#A94444] flex items-center justify-center text-[#FFFDFC] shadow-md shadow-[#C95C5C]/20 group-hover:scale-105 transition-transform">
+              <Shield className="w-5 h-5 text-[#FFFDFC] stroke-[2.5]" />
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
-                <span className="text-xl font-bold tracking-tight text-white group-hover:text-brand-300 transition-colors">
+                <span className="text-xl font-bold tracking-tight text-[#302B2B] group-hover:text-[#A94444] transition-colors">
                   SafeMed
                 </span>
-                <span className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono tracking-wide uppercase font-semibold text-brand-400 bg-brand-500/10 border border-brand-500/20 rounded">
+                <span className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono tracking-wide uppercase font-semibold text-[#A94444] bg-[#F7E3E3] border border-[#E8A3A3] rounded">
                   Research
                 </span>
               </div>
@@ -87,7 +87,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="px-3 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors"
+                className="px-3 py-1.5 text-sm font-medium text-[#6B6260] hover:text-[#302B2B] hover:bg-[#F5EFE6] rounded-lg transition-colors"
               >
                 {link.name}
               </a>
@@ -98,11 +98,11 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               to="/research"
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 border border-slate-700/80 hover:border-brand-500/50 rounded-xl transition-all shadow-sm hover:shadow-brand-500/10 group"
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-[#FFFDFC] bg-[#C95C5C] hover:bg-[#A94444] border border-[#C95C5C] hover:border-[#A94444] rounded-xl transition-all shadow-sm hover:shadow-[#C95C5C]/20 group"
             >
-              <BookOpen className="w-4 h-4 text-brand-400 group-hover:text-brand-300 transition-colors" />
+              <BookOpen className="w-4 h-4 text-[#FFFDFC]" />
               <span>Research Papers</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-[#FFFDFC]/80 group-hover:text-[#FFFDFC] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
           </div>
 
@@ -111,7 +111,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500"
+              className="p-2 text-[#6B6260] hover:text-[#302B2B] hover:bg-[#F5EFE6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C95C5C]"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
             >
@@ -123,7 +123,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-slate-800 bg-navy-950/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-2 animate-fadeIn">
+        <div className="md:hidden border-b border-[#E6D9CF] bg-[#FFFDFC]/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-2 animate-fadeIn shadow-lg">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -132,16 +132,16 @@ export default function Navbar() {
                 handleNavClick(e, link.href);
                 setMobileMenuOpen(false);
               }}
-              className="block px-3 py-2 text-base font-medium text-slate-200 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+              className="block px-3 py-2 text-base font-medium text-[#6B6260] hover:text-[#302B2B] hover:bg-[#F5EFE6] rounded-lg transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <div className="pt-3 border-t border-slate-800">
+          <div className="pt-3 border-t border-[#E6D9CF]">
             <Link
               to="/research"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-2 w-full px-4 py-2.5 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-500 rounded-xl shadow-md transition-colors"
+              className="flex items-center justify-center gap-2 w-full px-4 py-2.5 text-sm font-semibold text-[#FFFDFC] bg-[#C95C5C] hover:bg-[#A94444] rounded-xl shadow-md transition-colors"
             >
               <BookOpen className="w-4 h-4" />
               <span>Explore Research Papers</span>

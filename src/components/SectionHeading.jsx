@@ -11,10 +11,10 @@ export default function SectionHeading({
   tagColor = "brand" // brand | teal | purple | amber
 }) {
   const tagColorStyles = {
-    brand: "text-brand-400 bg-brand-500/10 border-brand-500/20",
-    teal: "text-tealAccent-400 bg-tealAccent-500/10 border-tealAccent-500/20",
-    purple: "text-purple-400 bg-purple-500/10 border-purple-500/20",
-    amber: "text-amber-400 bg-amber-500/10 border-amber-500/20"
+    brand: "text-[#A94444] bg-[#F7E3E3] border-[#E8A3A3]",
+    teal: "text-[#A94444] bg-[#F7E3E3] border-[#E8A3A3]",
+    purple: "text-[#8E44AD] bg-[#F4ECF7] border-[#D7BDE2]",
+    amber: "text-[#B7791F] bg-[#FEFCBF] border-[#F6E05E]"
   };
 
   return (
@@ -25,11 +25,11 @@ export default function SectionHeading({
           {tag}
         </span>
       )}
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#302B2B] tracking-tight leading-tight">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-base md:text-lg text-slate-400 leading-relaxed font-normal">
+        <p className="mt-4 text-base md:text-lg text-[#6B6260] leading-relaxed font-normal">
           {subtitle}
         </p>
       )}

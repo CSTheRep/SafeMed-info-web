@@ -14,10 +14,10 @@ export default function OriginStory() {
   ];
 
   return (
-    <section id="origin-story" className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-navy-950/40 via-navy-900/30 to-navy-950/60 border-t border-slate-900">
+    <section id="origin-story" className="py-20 md:py-28 relative overflow-hidden bg-[#F5EFE6] border-t border-[#E6D9CF]">
       
       {/* Ambient background blur */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-brand-500/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#C95C5C]/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -33,27 +33,27 @@ export default function OriginStory() {
           
           {/* Main Story Narrative Block (Left) */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="rounded-2xl bg-slate-900/80 border border-slate-800 p-8 shadow-xl relative">
-              <div className="w-8 h-8 rounded-lg bg-tealAccent-500/10 border border-tealAccent-500/20 flex items-center justify-center text-tealAccent-400 mb-6">
+            <div className="rounded-2xl bg-[#FFFDFC] border border-[#E6D9CF] p-8 shadow-md relative">
+              <div className="w-8 h-8 rounded-lg bg-[#F7E3E3] border border-[#E8A3A3] flex items-center justify-center text-[#A94444] mb-6">
                 <Sparkles className="w-4 h-4" />
               </div>
               
-              <h3 className="text-2xl font-bold text-white tracking-tight mb-4">
+              <h3 className="text-2xl font-bold text-[#302B2B] tracking-tight mb-4">
                 The Spark of Observation
               </h3>
               
-              <div className="bg-slate-950/70 border-l-2 border-brand-500 p-5 rounded-r-xl my-4 text-slate-300 font-mono text-sm leading-relaxed">
-                <span className="text-xs text-brand-400 font-semibold block mb-1">REAL-WORLD CATALYST</span>
+              <div className="bg-[#FAF7F2] border-l-2 border-[#C95C5C] p-5 rounded-r-xl my-4 text-[#302B2B] font-mono text-sm leading-relaxed">
+                <span className="text-xs text-[#A94444] font-semibold block mb-1">REAL-WORLD CATALYST</span>
                 {origin.quote}
               </div>
 
-              <p className="text-slate-300 text-sm leading-relaxed mt-4">
+              <p className="text-[#6B6260] text-sm leading-relaxed mt-4">
                 SafeMed was not conceived in a vacuum or as a generic academic exercise. It began with an immediate recognition of how precarious medication safety can be when patients encounter adverse reactions, yet face fragmented avenues to log, verify, and understand what is happening.
               </p>
 
-              <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+              <div className="mt-6 pt-4 border-t border-[#E6D9CF] flex items-center justify-between text-xs text-[#857B78] font-mono">
                 <span>Phase 01: Formative Inception</span>
-                <span className="text-tealAccent-400 font-semibold">Real Encounter → Scientific Goal</span>
+                <span className="text-[#A94444] font-semibold">Real Encounter → Scientific Goal</span>
               </div>
             </div>
           </div>
@@ -61,9 +61,9 @@ export default function OriginStory() {
           {/* Connected Evolution Column (Right) */}
           <div className="lg:col-span-6">
             <div className="space-y-4">
-              <div className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-2">
+              <div className="text-xs font-mono uppercase tracking-wider text-[#857B78] mb-2 flex items-center gap-2">
                 <span>Narrative Arc</span>
-                <span className="h-px bg-slate-800 flex-1"></span>
+                <span className="h-px bg-[#E6D9CF] flex-1"></span>
               </div>
 
               {origin.steps.map((step, idx) => {
@@ -71,30 +71,30 @@ export default function OriginStory() {
                 return (
                   <div
                     key={step.stage}
-                    className="relative flex items-start gap-4 p-5 rounded-xl bg-slate-900/60 border border-slate-800/90 hover:border-slate-700 transition-colors"
+                    className="relative flex items-start gap-4 p-5 rounded-xl bg-[#FFFDFC] border border-[#E6D9CF] hover:border-[#E8A3A3] transition-colors shadow-sm"
                   >
-                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-brand-400 font-bold text-xs">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#F7E3E3] border border-[#E8A3A3] flex items-center justify-center text-[#A94444] font-bold text-xs">
                       {step.stage}
                     </div>
 
                     <div className="flex-1">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-mono uppercase tracking-wider text-tealAccent-400 font-semibold">
+                        <span className="text-xs font-mono uppercase tracking-wider text-[#A94444] font-semibold">
                           {step.label}
                         </span>
-                        <span className="text-slate-600">•</span>
-                        <h4 className="text-base font-bold text-white">
+                        <span className="text-[#E6D9CF]">•</span>
+                        <h4 className="text-base font-bold text-[#302B2B]">
                           {step.title}
                         </h4>
                       </div>
 
-                      <div className="mt-2 text-xs font-sans text-slate-300/90 bg-slate-950/40 p-3 rounded-lg border border-slate-800/60 leading-relaxed">
+                      <div className="mt-2 text-xs font-sans text-[#6B6260] bg-[#FAF7F2] p-3 rounded-lg border border-[#E6D9CF] leading-relaxed">
                         {step.description}
                       </div>
                     </div>
 
                     {idx < origin.steps.length - 1 && (
-                      <div className="hidden sm:flex self-center text-slate-600">
+                      <div className="hidden sm:flex self-center text-[#E6D9CF]">
                         <ArrowRight className="w-4 h-4" />
                       </div>
                     )}

@@ -27,7 +27,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-navy-950 text-slate-100 flex flex-col font-sans selection:bg-brand-500/30 selection:text-brand-200">
+    <div className="min-h-screen bg-[#FAF7F2] text-[#302B2B] flex flex-col font-sans selection:bg-[#F7E3E3] selection:text-[#A94444]">
       <ScrollToTop />
       
       {/* Sticky Navigation */}

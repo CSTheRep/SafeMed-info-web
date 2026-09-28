@@ -12,21 +12,21 @@ export default function WhySafeMed() {
   };
 
   const borderAccents = {
-    problem: "hover:border-amber-500/50 group-hover:text-amber-400",
-    gap: "hover:border-rose-500/50 group-hover:text-rose-400",
-    opportunity: "hover:border-tealAccent-500/50 group-hover:text-tealAccent-400",
-    goal: "hover:border-sky-500/50 group-hover:text-sky-400",
+    problem: "hover:border-[#E8A3A3] group-hover:text-[#A94444]",
+    gap: "hover:border-[#E8A3A3] group-hover:text-[#A94444]",
+    opportunity: "hover:border-[#E8A3A3] group-hover:text-[#A94444]",
+    goal: "hover:border-[#E8A3A3] group-hover:text-[#A94444]",
   };
 
   const badgeColors = {
-    problem: "text-amber-400 bg-amber-500/10 border-amber-500/20",
-    gap: "text-rose-400 bg-rose-500/10 border-rose-500/20",
-    opportunity: "text-tealAccent-400 bg-tealAccent-500/10 border-tealAccent-500/20",
-    goal: "text-sky-400 bg-sky-500/10 border-sky-500/20",
+    problem: "text-[#B7791F] bg-[#FEFCBF] border-[#F6E05E]",
+    gap: "text-[#A94444] bg-[#F7E3E3] border-[#E8A3A3]",
+    opportunity: "text-[#C95C5C] bg-[#F7E3E3] border-[#E8A3A3]",
+    goal: "text-[#A94444] bg-[#F5EFE6] border-[#E6D9CF]",
   };
 
   return (
-    <section id="why-safemed" className="py-20 md:py-28 bg-navy-950/60 relative border-t border-slate-900">
+    <section id="why-safemed" className="py-20 md:py-28 bg-[#FAF7F2] relative border-t border-[#E6D9CF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -43,12 +43,12 @@ export default function WhySafeMed() {
             return (
               <div
                 key={item.id}
-                className={`group rounded-2xl bg-slate-900/60 border border-slate-800 p-6 flex flex-col justify-between transition-all duration-300 ${borderAccents[item.id] || 'hover:border-brand-500/50'} hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40`}
+                className={`group rounded-2xl bg-[#FFFDFC] border border-[#E6D9CF] p-6 flex flex-col justify-between transition-all duration-300 ${borderAccents[item.id] || 'hover:border-[#E8A3A3]'} hover:-translate-y-1 hover:shadow-md hover:shadow-[#C95C5C]/5`}
               >
                 <div>
                   {/* Top Bar with Icon & Tag */}
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-10 h-10 rounded-xl bg-slate-800/80 border border-slate-700/80 flex items-center justify-center text-slate-300 transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-[#F5EFE6] border border-[#E6D9CF] flex items-center justify-center text-[#A94444] transition-colors">
                       <IconComponent className="w-5 h-5" />
                     </div>
                     <span className={`text-[10px] font-mono uppercase tracking-wider font-semibold px-2.5 py-1 rounded-full border ${badgeColors[item.id]}`}>
@@ -57,12 +57,12 @@ export default function WhySafeMed() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-300 transition-colors">
+                  <h3 className="text-xl font-bold text-[#302B2B] mb-3 group-hover:text-[#A94444] transition-colors">
                     {item.title}
                   </h3>
 
                   {/* Placeholder Content */}
-                  <div className="text-sm text-slate-300/90 leading-relaxed bg-slate-950/40 p-4 rounded-xl border border-slate-800/60">
+                  <div className="text-sm text-[#6B6260] leading-relaxed bg-[#FAF7F2] p-4 rounded-xl border border-[#E6D9CF]">
                     <p className="font-normal font-sans">
                       {item.content}
                     </p>
@@ -70,7 +70,7 @@ export default function WhySafeMed() {
                 </div>
 
                 {/* Bottom Card Footer */}
-                <div className="mt-6 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-slate-500 font-mono">
+                <div className="mt-6 pt-4 border-t border-[#E6D9CF] flex items-center justify-between text-xs text-[#857B78] font-mono">
                   <span>Context Card</span>
                   <span className="uppercase">{item.id}</span>
                 </div>

@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light;
   }
   
   html {
@@ -12,29 +12,29 @@
   }
 
   body {
-    background-color: #070d19;
-    color: #e2e8f0;
+    background-color: #FAF7F2;
+    color: #302B2B;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }
 
 /* Academic & Tech Background Grids */
 .bg-grid-pattern {
-  background-image: radial-gradient(rgba(14, 165, 233, 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(201, 92, 92, 0.08) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
 .bg-dot-pattern {
-  background-image: radial-gradient(rgba(20, 184, 166, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(169, 68, 68, 0.08) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
 /* Glassmorphic Cards */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.75);
+  background: rgba(255, 253, 252, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(51, 65, 85, 0.6);
+  border: 1px solid #E6D9CF;
 }
 
 .glass-panel-hover {
@@ -42,19 +42,19 @@
 }
 
 .glass-panel-hover:hover {
-  background: rgba(15, 23, 42, 0.9);
-  border-color: rgba(56, 189, 248, 0.5);
-  box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.15);
+  background: #FFFDFC;
+  border-color: #E8A3A3;
+  box-shadow: 0 10px 30px -10px rgba(201, 92, 92, 0.12);
   transform: translateY(-2px);
 }
 
-/* Subtle Quantum Glow Accents */
+/* Subtle Glow Accents */
 .quantum-glow {
-  box-shadow: 0 0 50px -10px rgba(14, 165, 233, 0.18);
+  box-shadow: 0 0 50px -10px rgba(201, 92, 92, 0.15);
 }
 
 .teal-glow {
-  box-shadow: 0 0 40px -10px rgba(20, 184, 166, 0.2);
+  box-shadow: 0 0 40px -10px rgba(201, 92, 92, 0.12);
 }
 
 /* Custom Scrollbar for desktop */
@@ -64,16 +64,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #090d16;
+  background: #FAF7F2;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #E6D9CF;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #D8C5B8;
 }
 
 /* Accessibility: Reduced Motion */
