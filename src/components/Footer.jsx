@@ -34,10 +34,11 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#C95C5C] to-[#A94444] flex items-center justify-center text-[#FFFDFC]">
-                <Shield className="w-4 h-4 stroke-[2.5]" />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-[#302B2B]">SafeMed</span>
+              <img
+                src="/safemed-logo.png"
+                alt="SafeMed Logo"
+                className="h-10 w-auto object-contain"
+              />
             </div>
             
             <p className="text-sm font-medium text-[#302B2B]">

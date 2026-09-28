@@ -72,7 +72,7 @@ export default function ResearchCard({ paper }) {
         {/* Abstract Box */}
         <div className="mb-6 p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF]">
           <span className="text-[10px] font-mono uppercase text-[#857B78] font-bold block mb-1.5">
-            Abstract Placeholder
+            {paper.id === 1 ? "Abstract" : "Abstract Placeholder"}
           </span>
           <p className="text-xs text-[#6B6260] font-sans leading-relaxed">
             {paper.abstract}

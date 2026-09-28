@@ -63,9 +63,11 @@ export default function About() {
           <div className="lg:col-span-7 space-y-6">
             <div className="p-8 rounded-2xl bg-[#FFFDFC] border border-[#E6D9CF] shadow-sm space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C95C5C] to-[#A94444] flex items-center justify-center text-[#FFFDFC] font-bold shadow-sm">
-                  <Shield className="w-5 h-5 stroke-[2.5]" />
-                </div>
+                <img
+                  src="/safemed-logo.png"
+                  alt="SafeMed Logo"
+                  className="h-11 w-auto object-contain"
+                />
                 <div>
                   <h3 className="text-xl font-bold text-[#302B2B]">SafeMed Initiative</h3>
                   <p className="text-xs font-mono text-[#857B78]">Research &amp; Product Showcase</p>

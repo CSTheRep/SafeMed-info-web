@@ -69,19 +69,19 @@ export const journeyStages = [
     step: "04",
     id: "research-1",
     stageNumber: 4,
-    title: "Research 1: Foundational Study",
+    title: "Research 1: SafeMed ADE Awareness & Reporting Platform",
     phase: "First Academic Investigation",
-    year: "[Year / Research 1]",
+    year: "2025",
     icon: "FileText",
     researchId: 1,
-    shortSummary: "The first formal research paper establishing the computational baseline, data taxonomy, and structured modeling foundation for adverse drug reaction exploration.",
-    description: "[Actual research title and specific findings to be added later. Content to be added.]",
-    keyInsight: "Formalized quantitative benchmarks and established rigorous data representations for adverse drug reactions.",
-    progressionNote: "Literature findings materialized into our first dedicated academic study.",
+    shortSummary: "Published research addressing under-reporting of ADRs in India through SafeMed: a patient-centric, AI-driven digital platform integrating prescription OCR, AI categorization, and AMC routing.",
+    description: "Published in IEEE ICICV-2025: 'SafeMed: An ADE Awareness Platform for Survey and Reporting' (ISBN: 979-8-3315-1174-6). Analyzes the severe underreporting of ADRs in India (<1% vs. ~5% global average) and evaluates public awareness (73.5% unaware) alongside digital platform readiness (86.4% in favor of online portals). Details the modular three-tier architecture connecting patients, AMCs, and regulatory bodies.",
+    keyInsight: "Empirical survey established an acute public awareness deficit (73.5% unawareness) contrasted by overwhelming support (86.4%) for digital reporting platforms.",
+    progressionNote: "Literature review findings and prototype workflows materialized into our first peer-reviewed IEEE publication.",
     details: [
-      { label: "Focus", value: "[Research Area to be added]" },
-      { label: "Deliverable", value: "Peer-reviewed research paper establishing the foundational framework" },
-      { label: "Open Challenge", value: "Classical high-dimensional representations revealed non-linear bottlenecks in complex drug synergy spaces." }
+      { label: "Focus", value: "ADR Awareness, Digital Reporting & Pharmacovigilance Architecture" },
+      { label: "Deliverable", value: "Published in IEEE ICICV-2025 (pp. 701–706, ISBN: 979-8-3315-1174-6)" },
+      { label: "Open Challenge", value: "Prescription OCR handwriting variability, rural digital divide, and revitalizing non-functional AMCs (43%)." }
     ]
   },
   {

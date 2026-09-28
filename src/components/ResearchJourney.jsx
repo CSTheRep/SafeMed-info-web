@@ -147,7 +147,9 @@ export default function ResearchJourney() {
 
                     {/* Placeholder Box */}
                     <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] font-mono text-xs text-[#6B6260] leading-relaxed">
-                      <span className="text-[#A94444] font-semibold block mb-1">STAGE PLACEHOLDER DETAIL:</span>
+                      <span className="text-[#A94444] font-semibold block mb-1">
+                        {current.id === 'research-1' ? "RESEARCH PAPER 01 SUMMARY:" : "STAGE PLACEHOLDER DETAIL:"}
+                      </span>
                       {current.description}
                     </div>
 
@@ -251,7 +253,9 @@ export default function ResearchJourney() {
                 {isExpanded && (
                   <div className="space-y-3 pt-3 border-t border-[#E6D9CF] animate-fadeIn">
                     <div className="p-3.5 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
-                      <span className="text-[#A94444] font-bold block mb-1">PLACEHOLDER:</span>
+                      <span className="text-[#A94444] font-bold block mb-1">
+                        {stage.id === 'research-1' ? "RESEARCH SUMMARY:" : "PLACEHOLDER:"}
+                      </span>
                       {stage.description}
                     </div>
 

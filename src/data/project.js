@@ -12,12 +12,12 @@ export const projectConfig = {
   
   // External & Showcase Links (Configure these anytime)
   links: {
-    github: "https://github.com", // Replace with your SafeMed GitHub repo URL
+    github: "https://github.com/CSTheRep", // GitHub profile / repository URL
     researchArchive: "/research", // Route or external URL to papers
     documentation: "#", // Replace with docs link if available
     demonstration: "#", // Replace with live demo URL if available
     contactEmail: "contact@safemed-project.org", // Contact email
-    authorProfile: "#", // Academic profile / Google Scholar / ORCID / LinkedIn
+    authorProfile: "https://www.linkedin.com/in/priyanshu-kumar-b7370224b/", // LinkedIn profile
   },
 
   // Problem, Gap, Opportunity, Goal (Why SafeMed?)

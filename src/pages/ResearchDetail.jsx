@@ -48,7 +48,7 @@ export default function ResearchDetail() {
     }
   };
 
-  const navSections = [
+  const baseNavSections = [
     { id: "overview", label: "Overview & Abstract" },
     { id: "background", label: "Background" },
     { id: "problem", label: "Problem Statement" },
@@ -62,6 +62,10 @@ export default function ResearchDetail() {
     { id: "future", label: "Future Work" },
     { id: "conclusion", label: "Conclusion" },
   ];
+
+  const navSections = paper.references && paper.references.length > 0
+    ? [...baseNavSections, { id: "references", label: "References" }]
+    : baseNavSections;
 
   const scrollToSection = (secId) => {
     setActiveSection(secId);
@@ -155,8 +159,8 @@ export default function ResearchDetail() {
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             ) : (
-              <span className="text-xs font-mono text-[#857B78] px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF]">
-                [19. Paper Link: To be added upon publication]
+              <span className="text-xs font-mono text-[#857B78] px-3 py-1.5 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF] text-right truncate max-w-md" title={paper.venue || "To be added upon publication"}>
+                {paper.venue ? paper.venue : "[19. Paper Link: To be added upon publication]"}
               </span>
             )}
           </div>
@@ -186,16 +190,26 @@ export default function ResearchDetail() {
               <span className="text-[10px] text-[#857B78] block uppercase mb-1 flex items-center gap-1">
                 <Bookmark className="w-3 h-3 text-[#C95C5C]" /> Status / Venue
               </span>
-              <span className="text-[#302B2B] font-semibold">{paper.status}</span>
+              <span className="text-[#302B2B] font-semibold block">{paper.status}</span>
+              {paper.doi && (
+                <span className="text-[10px] text-[#857B78] block mt-1 truncate" title={paper.doi}>
+                  {paper.doi}
+                </span>
+              )}
             </div>
 
             <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF]">
               <span className="text-[10px] text-[#857B78] block uppercase mb-1 flex items-center gap-1">
                 <User className="w-3 h-3 text-[#A94444]" /> Authors
               </span>
-              <span className="text-[#302B2B] font-sans truncate block">
+              <span className="text-[#302B2B] font-sans truncate block font-medium" title={Array.isArray(paper.authors) ? paper.authors.join(", ") : paper.authors}>
                 {Array.isArray(paper.authors) ? paper.authors.join(", ") : paper.authors}
               </span>
+              {paper.affiliations && (
+                <span className="text-[10px] text-[#857B78] block mt-1 font-sans truncate" title={paper.affiliations}>
+                  {paper.affiliations}
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -266,7 +280,7 @@ export default function ResearchDetail() {
             </div>
           )}
 
-          {/* Main Reading Paper Content (All 19 Sections) */}
+          {/* Main Reading Paper Content (All Sections) */}
           <main className="lg:col-span-9 space-y-10">
             
             {/* 5. Abstract & 6. Background */}
@@ -279,6 +293,16 @@ export default function ResearchDetail() {
                 <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-sm text-[#6B6260] leading-relaxed font-sans">
                   {paper.abstract}
                 </div>
+                {paper.keywords && paper.keywords.length > 0 && (
+                  <div className="mt-3.5 flex flex-wrap items-center gap-2">
+                    <span className="text-xs font-mono text-[#857B78] font-semibold">Keywords:</span>
+                    {paper.keywords.map((kw, idx) => (
+                      <span key={idx} className="text-xs font-mono px-2.5 py-1 rounded-md bg-[#FAF7F2] border border-[#E6D9CF] text-[#6B6260]">
+                        {kw}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
 
               <div id="background" className="pt-6 border-t border-[#E6D9CF]">
@@ -286,7 +310,7 @@ export default function ResearchDetail() {
                   Section 06
                 </span>
                 <h2 className="text-xl font-bold text-[#302B2B] mb-3">Background</h2>
-                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed whitespace-pre-line">
                   {paper.sections.background}
                 </div>
               </div>
@@ -299,7 +323,7 @@ export default function ResearchDetail() {
                   Section 07
                 </span>
                 <h2 className="text-2xl font-bold text-[#302B2B] mb-3">Problem Statement</h2>
-                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed whitespace-pre-line">
                   {paper.sections.problemStatement}
                 </div>
               </div>
@@ -309,7 +333,7 @@ export default function ResearchDetail() {
                   <span className="text-xs font-mono font-bold text-[#857B78] uppercase tracking-wider block mb-1">
                     Section 08 • Motivation
                   </span>
-                  <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed h-full">
+                  <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed h-full whitespace-pre-line">
                     {paper.sections.motivation}
                   </div>
                 </div>
@@ -318,7 +342,7 @@ export default function ResearchDetail() {
                   <span className="text-xs font-mono font-bold text-[#857B78] uppercase tracking-wider block mb-1">
                     Section 09 • Objectives
                   </span>
-                  <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed h-full">
+                  <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed h-full whitespace-pre-line">
                     {paper.sections.objectives}
                   </div>
                 </div>
@@ -332,7 +356,7 @@ export default function ResearchDetail() {
                   Section 10
                 </span>
                 <h2 className="text-2xl font-bold text-[#302B2B] mb-3">Methodology</h2>
-                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed whitespace-pre-line">
                   {paper.sections.methodology}
                 </div>
               </div>
@@ -342,7 +366,7 @@ export default function ResearchDetail() {
                   Section 12
                 </span>
                 <h2 className="text-xl font-bold text-[#302B2B] mb-3">Architecture / Model</h2>
-                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed whitespace-pre-line">
                   {paper.sections.architecture}
                 </div>
               </div>
@@ -355,7 +379,7 @@ export default function ResearchDetail() {
                   Section 11
                 </span>
                 <h2 className="text-2xl font-bold text-[#302B2B] mb-3">Dataset / Data Source</h2>
-                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed whitespace-pre-line">
                   {paper.sections.dataset}
                 </div>
               </div>
@@ -365,7 +389,7 @@ export default function ResearchDetail() {
                   Section 13
                 </span>
                 <h2 className="text-xl font-bold text-[#302B2B] mb-3">Experimental Setup</h2>
-                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed whitespace-pre-line">
                   {paper.sections.experimentalSetup}
                 </div>
               </div>
@@ -377,12 +401,18 @@ export default function ResearchDetail() {
                 Section 14
               </span>
               <h2 className="text-2xl font-bold text-[#302B2B] mb-3">Results &amp; Empirical Evaluation</h2>
-              <div className="p-5 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
+              <div className="p-5 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed whitespace-pre-line">
                 {paper.sections.results}
               </div>
-              <div className="p-3 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF] text-[11px] font-mono text-[#857B78]">
-                Strict placeholder rule: No synthetic metrics or fabricated benchmark scores are displayed.
-              </div>
+              {paper.id !== 1 ? (
+                <div className="p-3 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF] text-[11px] font-mono text-[#857B78]">
+                  Strict placeholder rule: No synthetic metrics or fabricated benchmark scores are displayed.
+                </div>
+              ) : (
+                <div className="p-3 rounded-lg bg-[#FAF7F2] border border-[#E6D9CF] text-[11px] font-mono text-[#857B78]">
+                  Empirical results extracted directly from the IEEE ICICV-2025 published paper (Figs. 1–7).
+                </div>
+              )}
             </section>
 
             {/* 15. Discussion & 16. Limitations */}
@@ -392,7 +422,7 @@ export default function ResearchDetail() {
                   Section 15
                 </span>
                 <h2 className="text-2xl font-bold text-[#302B2B] mb-3">Discussion</h2>
-                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed whitespace-pre-line">
                   {paper.sections.discussion}
                 </div>
               </div>
@@ -402,7 +432,7 @@ export default function ResearchDetail() {
                   Section 16
                 </span>
                 <h2 className="text-xl font-bold text-[#302B2B] mb-3">Limitations</h2>
-                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed whitespace-pre-line">
                   {paper.sections.limitations}
                 </div>
               </div>
@@ -415,7 +445,7 @@ export default function ResearchDetail() {
                   Section 17
                 </span>
                 <h2 className="text-2xl font-bold text-[#302B2B] mb-3">Future Work</h2>
-                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed whitespace-pre-line">
                   {paper.sections.futureWork}
                 </div>
               </div>
@@ -425,11 +455,29 @@ export default function ResearchDetail() {
                   Section 18
                 </span>
                 <h2 className="text-xl font-bold text-[#302B2B] mb-3">Conclusion</h2>
-                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed">
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] text-xs font-mono text-[#6B6260] leading-relaxed whitespace-pre-line">
                   {paper.sections.conclusion}
                 </div>
               </div>
             </section>
+
+            {/* 19. References */}
+            {paper.references && paper.references.length > 0 && (
+              <section id="references" className="rounded-2xl border border-[#E6D9CF] bg-[#FFFDFC] p-6 md:p-8 space-y-4 shadow-sm">
+                <span className="text-xs font-mono font-bold text-[#C95C5C] uppercase tracking-wider block mb-1">
+                  Section 19
+                </span>
+                <h2 className="text-2xl font-bold text-[#302B2B] mb-3">References</h2>
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E6D9CF] divide-y divide-[#E6D9CF] text-xs font-mono text-[#6B6260]">
+                  {paper.references.map((ref, idx) => (
+                    <div key={idx} className="py-2.5 first:pt-0 last:pb-0 flex items-start gap-2">
+                      <span className="text-[#A94444] font-bold shrink-0">[{idx + 1}]</span>
+                      <span className="leading-relaxed">{ref}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
 
             {/* Bottom Paper Navigation (Previous / Next Paper) */}
             <div className="pt-8 border-t border-[#E6D9CF] flex flex-col sm:flex-row items-center justify-between gap-4">

@@ -63,21 +63,16 @@ export default function Navbar() {
           {/* Logo / Brand */}
           <Link
             to="/"
-            className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-[#C95C5C] rounded-lg p-1"
+            className="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-[#C95C5C] rounded-lg p-1"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#C95C5C] to-[#A94444] flex items-center justify-center text-[#FFFDFC] shadow-md shadow-[#C95C5C]/20 group-hover:scale-105 transition-transform">
-              <Shield className="w-5 h-5 text-[#FFFDFC] stroke-[2.5]" />
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center gap-2">
-                <span className="text-xl font-bold tracking-tight text-[#302B2B] group-hover:text-[#A94444] transition-colors">
-                  SafeMed
-                </span>
-                <span className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono tracking-wide uppercase font-semibold text-[#A94444] bg-[#F7E3E3] border border-[#E8A3A3] rounded">
-                  Research
-                </span>
-              </div>
-            </div>
+            <img
+              src="/safemed-logo.png"
+              alt="SafeMed Logo"
+              className="h-9 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform"
+            />
+            <span className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono tracking-wide uppercase font-semibold text-[#A94444] bg-[#F7E3E3] border border-[#E8A3A3] rounded">
+              Research
+            </span>
           </Link>
 
           {/* Desktop Navigation Links */}

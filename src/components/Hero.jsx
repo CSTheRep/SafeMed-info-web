@@ -114,7 +114,7 @@ export default function Hero() {
 
                   {/* Central Node: SafeMed Engine */}
                   <div className="relative z-10 w-24 h-24 rounded-2xl bg-gradient-to-br from-[#FFFDFC] to-[#F5EFE6] border-2 border-[#C95C5C] flex flex-col items-center justify-center shadow-md shadow-[#C95C5C]/15">
-                    <Shield className="w-7 h-7 text-[#C95C5C] mb-1" />
+                    <img src="/safemed-icon.png" alt="SafeMed Icon" className="w-4 h-7 object-contain mb-1" />
                     <span className="text-[11px] font-bold text-[#302B2B] tracking-wider">SafeMed</span>
                     <span className="text-[9px] text-[#A94444] font-mono font-bold">CORE</span>
                   </div>

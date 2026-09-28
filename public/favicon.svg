@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Outer Pill Capsule -->
+  <rect x="18" y="6" width="28" height="52" rx="14" fill="#FFFDFC" stroke="#1A1A1A" stroke-width="4.5"/>
+  <!-- Bottom Filled Half -->
+  <path d="M18 32 H46 V44 C46 51.73 39.73 58 32 58 C24.27 58 18 51.73 18 44 Z" fill="#1A1A1A"/>
+  <!-- Dividing Line -->
+  <line x1="18" y1="32" x2="46" y2="32" stroke="#1A1A1A" stroke-width="3"/>
+  <!-- Vertical White Slit Inside Bottom Half -->
+  <line x1="32" y1="37" x2="32" y2="49" stroke="#FFFDFC" stroke-width="3.5" stroke-linecap="round"/>
+</svg>
